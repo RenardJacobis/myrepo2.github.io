@@ -1,0 +1,239 @@
+<!DOC TYPE html>
+<html>
+<head>
+
+<title> Renard's Web Page</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel = "stylesheet" type = "text/css"  href = "PersonalStyle.css">
+</head>
+
+<body>
+
+<div class = "background">
+			<div class = "nav">
+			<a class = "a active" href = "#"> Home </a>
+			<a class = "b" href = "#"> About Me </a>
+			<a class = "c" href = "#"> Academics </a>
+			<a class = "d" href = "#"> Gallery </a>
+			<a class = "e" href = "#"> Contact Me</a>
+		
+</div>
+
+<div class = "content">
+
+	<div class = "home" >
+		<h1> I am Renard Jacobis </h1>
+		<h3> Aspiring Computer Scientist and Teacher</h3>
+	</div>
+	
+	<div class = "aboutme">
+	<p> <h4> Greetings!! </h4> <br>
+	Welcome to my Web Page. <br>
+	Here you will learn:
+	<li> Some Basic Information about me</li>
+	<li> My Academic Background </li>
+	<li> Work Experience </li>
+
+	<li> A somewhat random gallery of pictures i like </li>
+	
+	
+	<h4> Bio Data </h4> <br>
+	Just a little Summary of who I am.
+	<li> <strong> Full Name: </strong> Renard St Stanislous Jacobis </li>
+	<li> <strong> Age: </strong> 21 </li>
+	<li> <strong> Profession: </strong> Teacher </li>
+	</p>
+	</div>
+	
+	
+	<div class = "gallery">
+	<h1> This is the Gallery</h1>
+		<div class = "image">
+		<img src = "1.jpg"/>
+		</div>
+		
+		<div class = "image">
+		<img src = "2.jpg"/>
+		</div>
+		
+		<div class = "image">
+		<img src = "3.jpg"/>
+		</div>
+		
+		<div class = "image">
+		<img src = "4.jpg"/>
+		</div>
+		
+		<div class = "image">
+		<img src = "5.jpg"/>
+		</div>
+		
+		<div class = "image">
+		<img src = "6.jpg"/>
+		</div>
+		
+		<div class = "image">
+		<img src = "7.jpg"/>
+		</div>
+		
+		</div>
+		
+		<div class = "academics">
+			<div class = "table" >
+			<table>
+				<tr>
+					<td id = "header" colspan = "3"> <h1>ACADEMIC TRACK RECORD </h1> </td>
+				</tr>
+				<tr>
+					<th width = "50%">Academic Level</th>
+					<th width = "30%"> Name of Subject</th>
+					<th width = "20%"> Grade</th>
+					
+				</tr>
+				
+				<tr>
+					<td> CSEC</td>
+					<td> Mathematics</td>
+					<td> A</td>
+					
+				</tr>
+				
+				<tr>
+					<td> CSEC</td>
+					<td> English Language</td>
+					<td> A </td>
+					
+				</tr>
+				
+				<tr>
+					<td> CSEC</td>
+					<td> Information Technology</td>
+					<td> A </td>
+					
+				</tr>
+				
+				<tr>
+					<td> CSEC</td>
+					<td> Integrated Science</td>
+					<td> A </td>
+					
+				</tr>
+				
+				<tr>
+					<td> CSEC</td>
+					<td> Economics</td>
+					<td> A </td>
+				</tr>
+				
+				<tr>
+					<td id = "header" colspan = "3"> <h1>WORK EXPERIENCE </h1> </td>
+				</tr>
+				
+				<tr>
+					<td> Secondary</td>
+					<td> Information Technology</td>
+					<td> 3rd & 4th Form</td>
+				</tr>
+				
+				<tr>
+					<td> Secondary</td>
+					<td>Digital Media</td>
+					<td> 6th Form</td>
+					
+				</tr>
+			</table>
+			</div>
+			
+	</div>
+	
+	<div class = "contactme">
+		<h1> Drop me a Message.</h1>
+		<div class = "contactform">
+		
+		<form action = "" method = "post">
+			<input type = "text" name = ""  class = "inputtext" value="First Name">
+			<input type = "text" name = ""  class = "inputtext" value = "Last Name">
+			<input type = "text" name = ""  class = "inputtext" value = "Email Address">
+			<textarea cols = "4" rows = "6" class = "inputmessage"> Write your Message here.</textarea>
+			<input type = "button" name = ""  class = "submitbutton" value = "Submit">
+		</form>
+		</div>
+	</div>
+	
+	
+</div>
+
+</div>	
+
+	<script type = "text/javascript" src = "jquery-3.2.1.min.js"> </script>
+	<script type = "text/javascript" >
+	
+			$(document).ready(function(){
+				$('a').click(function(){
+					//alert("I can be clicked");
+					var selected = $(this);
+					$('a'). removeClass ('active');
+					$ (selected).addClass ('active');
+				});
+				
+				var $a = $ ('.a'),
+				$b = $('.b'),
+				$c = $('.c'),
+				$d = $('.d'),
+				$e = $('.e'),
+				$home = $('.home'),
+				$aboutme = $('.aboutme');
+				$academics = $('.academics');
+				$gallery = $('.gallery');
+				$contactme = $('.contactme');
+				
+				
+				$a.click(function(){
+				$home.fadeIn();
+				$aboutme.fadeOut();
+				$academics.fadeOut();
+				$gallery.fadeOut();
+				$contactme.fadeOut();
+				
+				});
+				
+				$b.click(function(){
+				$aboutme.fadeIn();
+				$home.fadeOut();
+				$academics.fadeOut();
+				$gallery.fadeOut();
+				$contactme.fadeOut();
+				
+					});
+				
+				$c.click(function(){
+				$academics.fadeIn();
+				$home.fadeOut();
+				$aboutme.fadeOut();
+				$gallery.fadeOut();
+				$contactme.fadeOut();
+				
+				});
+				
+					$d.click(function(){
+				$gallery.fadeIn();
+				$home.fadeOut();
+				$aboutme.fadeOut();
+				$academics.fadeOut();
+				$contactme.fadeOut();
+				});
+				
+				$e.click(function(){
+				$contactme.fadeIn();
+				$home.fadeOut();
+				$aboutme.fadeOut();
+				$academics.fadeOut();
+				$gallery.fadeOut();
+				});
+				
+			
+				});
+			</script>
+			
+</body>
+</html>
